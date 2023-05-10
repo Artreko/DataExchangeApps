@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecieveServerForm</class>
+ <widget class="QWidget" name="RecieveServerForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Сервер для приема</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 rgb(222, 233, 255), stop: 1 #FFFFFF);
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 2ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+	border: 1px solid grey;
+    padding: 0 3px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #aaaaff, stop: 1 #FFFFFF);
+}
+
+QPushButton {
+	border: 1px solid grey;
+	border-radius: 3px;
+	background-color:rgba(170, 170, 255, 50);
+	padding: 3px;
+}
+QPushButton:pressed {
+	border-color: black;
+	background-color:rgba(170, 170, 255, 100);
+}
+QPushButton:hover {
+	border-color: black;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="imageGroup">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>10</y>
+     <width>431</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="title">
+    <string>Изображение</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="imageLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>noimg.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pasteImageButton">
+      <property name="text">
+       <string>Вставить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="clearImageButton">
+      <property name="text">
+       <string>Очитстить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="textGroup">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>291</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Текст</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLineEdit" name="textEdit">
+      <property name="text">
+       <string>Какой-то текст</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pasteTextButton">
+      <property name="text">
+       <string>Вставить</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="clearTextButton">
+      <property name="text">
+       <string>Очитстить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="dataRecordBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>291</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="title">
+    <string>Запись/Структура</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="nameLabel">
+      <property name="text">
+       <string>Имя</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="nameEdit">
+      <property name="text">
+       <string>Иван Иванов</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="expLabel">
+      <property name="text">
+       <string>Стаж</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="expSpin">
+      <property name="value">
+       <number>5</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="birthLabel">
+      <property name="text">
+       <string>Дата Рождения</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="birthEdit">
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1995</year>
+        <month>5</month>
+        <day>13</day>
+       </datetime>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pasteRecordButton">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Вставить</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="clearRecordButton">
+      <property name="text">
+       <string>Очитстить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

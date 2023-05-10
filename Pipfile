@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyqt6 = "*"
+pillow = "*"
+pywin32 = "*"
+pyperclip3 = "*"
+mysql-connector-python = "*"
+python-dotenv = "*"
+clipboard = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.2"
